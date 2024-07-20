@@ -110,5 +110,19 @@ module.exports.ShowDestination = async(req,res)=>{
     res.render("listing/destination.ejs",{all,destination});
 }
 
+module.exports.ConfirmBooking= async(req,res)=>{
+    let {id}=req.params;
+    let x=await Listing.findOne({_id:id});
+    return res.render("listing/booking.ejs",{x,id});
+}
 
-// JSK BHai
+
+
+module.exports.SupplyTicket = async(req,res)=>{
+    let {id}=req.params;
+    let user_data = req.body;
+    let x=await Listing.findOne({_id:id});
+    console.log(id,'\n',user_data,'\n',x);
+    res.render("listing/ticket.ejs",{x,id,user_data});
+    // return res.render("listing/booking.ejs",{x,id});
+}

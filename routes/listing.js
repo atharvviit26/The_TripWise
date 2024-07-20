@@ -36,9 +36,11 @@ router.post("/destination",ListingControler.ShowDestination);
 // show listings
 router.get("/:id",ListingControler.ShowAllListings);
 
-
+router.post("/:id/ticket",isLoggedIn,ListingControler.SupplyTicket);
 // edit Listing
 router.get("/:id/edit",isLoggedIn,isOwner,ListingControler.EditListing);
+
+router.get("/:id/ConfirmBooking",isLoggedIn,ListingControler.ConfirmBooking);
 
 // update Listing
 router.put("/:id" ,isLoggedIn,isOwner,upload.single("image"), ListingControler.UpdateListing);

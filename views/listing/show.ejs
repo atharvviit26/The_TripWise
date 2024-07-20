@@ -37,6 +37,13 @@
         <br>
         <br>
         <hr>
+        <div class="col-8 offset-5 mb-3">
+            <form action="/listing/<%= obj._id %>/ConfirmBooking">
+                <button class="btn search-btn search-ip" id="booknow"><h3>Book Now</h3></button>
+                <!-- <button></button> -->
+            </form>
+        </div>
+        <br><br>
         <div class="col-8 offset-3 mb-3">
             <h4>Leave a Review</h4>
             <% if(curUser) {%>
