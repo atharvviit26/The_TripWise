@@ -72,7 +72,7 @@
     </a>
     <a class="filter" id="Artic" href="/listing/Artic">
         <div><i class="fa-solid fa-snowman"></i></div>
-        <p>Artic</p>
+        <p>Snowy</p>
     </a>
     <a class="filter" id="Forest" href="/listing/Forest">
         <div><span class="material-symbols-outlined">pets</span></div>
@@ -89,9 +89,10 @@
           </div>
     </div>
 </div>
+<% let b=true ;%>
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for(a of all) {%>
-        <% if(a.tags.includes(q)) {%>
+        <% if(a.tags.includes(q)) { b=false%>
             <a href="/listing/<%= a._id %>" class="listing-link">
                 <div class="card col listing-card">
                     <img src="<%= a.image.url %>" class="card-img-top" alt="Listing Image" style="height: 20rem;">
@@ -106,11 +107,14 @@
                     </div>
                 </div>
             </a>
-        <% }else { %>
-        <h2><b>Sorry No Result Found !!!</b></h2>
+        <% }else {%>
+        <!-- <h2><b>Sorry No Result Found !!!</b></h2> -->
         <% } %>
 
     <% } %>
+    <%if(b){%>
+        <h2><b>Sorry No Result Found !!!</b></h2>
+        <% } %>
 </div>
 
 
