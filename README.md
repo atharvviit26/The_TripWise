@@ -21,10 +21,3 @@ Tripwise is a full-stack web application inspired by Airbnb, designed to showcas
 2. Install dependencies: `npm install` (or `yarn install`)
 3. Set up the database and environment variables
 4. Run the application: `npm start` (or `yarn start`)
-
-Feel free to explore the code and contribute!
-
----
-
-Replace the placeholders with the specific technologies you used in your project.
-# trips
